@@ -65,11 +65,11 @@ Implementação de bases de tempo precisas utilizando o **Timer 1 (16-bit)** em 
 Manipulação dos registros `ADMUX` e `ADCSRA` para amostragem de sinais analógicos com resolução de 10 bits.
 
 ## Estrutura do Repositório
-* ****`/atividades`**: Códigos-fonte `.ino` comentados, utilizando registradores como `DDRx`, `PORTx`, `ADMUX` e `TCCRnA/B` na implementação das atividades.
+* **`/atividades`**: Códigos-fonte `.ino` comentados, utilizando registradores como `DDRx`, `PORTx`, `ADMUX` e `TCCRnA/B` na implementação das atividades.
 * **`/relatorio`**: Centraliza a documentação acadêmica final:
 * `relatorio_sistemas_embarcados.pdf`: Versão compilada para leitura direta.
 * `projeto_latex.zip`: Código-fonte completo do projeto Overleaf para fins de portabilidade e edição futura.
-* `/figuras`: Esquemáticos de hardware e diagramas de blocos da arquitetura AVR.
+* **`/figuras`**: Esquemáticos de hardware e diagramas de blocos da arquitetura AVR.
 
 ## Como Executar
 1. Os códigos presentes em `/atividades` podem ser compilados diretamente na **Arduino IDE** ou importados para o ambiente **Tinkercad**.
