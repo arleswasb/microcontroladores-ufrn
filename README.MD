@@ -37,10 +37,11 @@ Conforme as diretrizes da disciplina, é **proibido** o uso de funções da API 
 * **Atividade I:** Contador visual binário (0 a 7) incrementado por um botão configurado via **interrupção externa** (Pino 2).
 * **Atividade II:** Semáforo complexo com **botão de pedestre**, integrando `millis()` e interrupções para gerenciamento de estados de travessia.
 
-### Aula 09 & 10: PWM e Comunicação Serial
-* **Controle de Carga:** Uso de PWM para controle de velocidade de motores DC e brilho de LEDs.
-* **Interface Serial:** Recebimento e tratamento de comandos via UART para ajuste proporcional de atuadores (0-255) com tratamento de erros.
+### Aula 09: Temporizadores e PWM
+* **Atividade:** Controle de velocidade para um **motor DC** utilizando Pulse Width Modulation **(PWM)** e um potenciômetro.
 
+### Aula 10: Comunicação Digital
+* **Atividade:** Controle de luminosidade de um LED usando comunicação serial e **PWM**
 
 ## Especificações Técnicas
 * **Target Hardware:** ATmega328P (8-bit AVR RISC architecture).

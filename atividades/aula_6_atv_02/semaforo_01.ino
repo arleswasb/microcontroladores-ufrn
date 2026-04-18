@@ -1,3 +1,7 @@
+/* * Atividade 2 - Aula 06: Semáforo com ciclo contínuo
+ * Implementacao purista utilizando Registradores e Hardware Timer 1.
+ */
+
 #include <avr/io.h>
 
 /*
