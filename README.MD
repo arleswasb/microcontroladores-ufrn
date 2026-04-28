@@ -4,14 +4,30 @@ Este repositório compila as atividades práticas e o projeto final desenvolvido
 
 ---
 
+## Tecnologias e Ferramentas
+
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
+![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white)
+![Overleaf](https://img.shields.io/badge/Overleaf-47A141?style=for-the-badge&logo=Overleaf&logoColor=white)
+![Tinkercad](https://img.shields.io/badge/Tinkercad-00AEEF?style=for-the-badge)
+![Wokwi](https://img.shields.io/badge/Wokwi-333333?style=for-the-badge)
+
+*   **Linguagens:** `C (AVR-GCC)`, `C++ (Arduino IDE)` e `LaTeX`.
+*   **Hardware:** ATmega328P (Uno), ATmega2560 (Mega).
+*   **Simulação:** Tinkercad e Wokwi.
+*   **Documentação:** Overleaf (LaTeX).
+
+---
+
 ## Projeto Final: SGC2AE
 O **Sistema de Gestão e Controle Automatizado de Estoque (SGC2AE)** é uma solução de *Edge Computing* para monitoramento e segurança de depósitos.
 
 ### Principais Funcionalidades:
-*   📦 **Gestão de Inventário:** Monitoramento volumétrico em 4 quadrantes via sensores ultrassônicos.
-*   🌡️ **Controle Ambiental:** Monitoramento de temperatura/umidade (DHT22) com exaustores automatizados via **PWM**.
-*   🚨 **Segurança Patrimonial:** Detecção de intrusão via **Interrupções de Hardware** (Sensor de porta) e alerta sonoro.
-*   🖥️ **Interface HMI:** Display LCD 16x2 I2C para telemetria local e monitoramento serial.
+*   **Gestão de Inventário:** Monitoramento volumétrico em 4 quadrantes via sensores ultrassônicos.
+*   **Controle Ambiental:** Monitoramento de temperatura/umidade (DHT22) com exaustores automatizados via PWM.
+*   **Segurança Patrimonial:** Detecção de intrusão via Interrupções de Hardware (Sensor de porta) e alerta sonoro.
+*   **Interface HMI:** Display LCD 16x2 I2C para telemetria local e monitoramento serial.
 
 #### Visão do Projeto:
 | Esquema Elétrico | Montagem no Protoboard |
@@ -20,13 +36,7 @@ O **Sistema de Gestão e Controle Automatizado de Estoque (SGC2AE)** é uma solu
 
 ---
 
-## 🛠️ Tecnologias e Ferramentas
-*   **Linguagens:** `C (AVR-GCC)`, `C++ (Arduino IDE)` e `LaTeX`.
-*   **Hardware:** ATmega328P (Uno), ATmega2560 (Mega).
-*   **Simulação:** Tinkercad e Wokwi.
-*   **Documentação:** Overleaf (LaTeX).
-
-## ⚙️ Especificações Técnicas
+## Especificações Técnicas
 *   **Target Hardware:** ATmega328P (8-bit AVR RISC architecture).
 *   **Clock Frequency:** 16 MHz (External Crystal Oscillator).
 *   **Toolchain:** AVR-GCC compiler, Toolchain AVR.
@@ -34,7 +44,7 @@ O **Sistema de Gestão e Controle Automatizado de Estoque (SGC2AE)** é uma solu
 
 ---
 
-## 🧠 Conceitos de Baixo Nível Aplicados
+## Conceitos de Baixo Nível Aplicados
 Conforme as diretrizes da disciplina, é **proibido** o uso de funções da API Arduino (como `digitalWrite` ou `delay`). Foram implementados:
 
 ### 1. Manipulação de I/O Digital via Registradores
@@ -60,7 +70,7 @@ Gerenciamento de eventos assíncronos em tempo real:
 
 ---
 
-## 📚 Atividades Desenvolvidas
+## Atividades Desenvolvidas
 
 | Aula | Descrição da Atividade | Código | Esquema | Montagem |
 | :--- | :--- | :---: | :---: | :---: |
@@ -79,7 +89,7 @@ Gerenciamento de eventos assíncronos em tempo real:
 
 ---
 
-## 📁 Estrutura do Repositório
+## Estrutura do Repositório
 *   **`/atividades`**: Códigos-fonte `.ino` comentados com uso de `DDRx`, `PORTx`, `ADMUX`, etc.
 *   **`/projeto_final`**: Código, diagramas e imagens do sistema SGC2AE.
 *   **`/relatorio`**: Documentação técnica final em PDF (`relatorio_sist_embarcados.pdf`).
@@ -87,7 +97,7 @@ Gerenciamento de eventos assíncronos em tempo real:
 
 ---
 
-## 👥 Desenvolvedores
+## Desenvolvedores
 *   **Arleswasb** - Desenvolvedor
 *   **OliveiraLuis33** - Desenvolvedor
 *   **Lucasadasc** - Desenvolvedor
