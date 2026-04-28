@@ -20,15 +20,47 @@ O **Sistema de Gestão e Controle Automatizado de Estoque (SGC2AE)** é uma solu
 
 ---
 
-## Tecnologias e Ferramentas
+## 🛠️ Tecnologias e Ferramentas
 *   **Linguagens:** `C (AVR-GCC)`, `C++ (Arduino IDE)` e `LaTeX`.
 *   **Hardware:** ATmega328P (Uno), ATmega2560 (Mega).
-*   **Periféricos:** Timers (Modo CTC/PWM), ADC, UART, Interrupções Externas.
 *   **Simulação:** Tinkercad e Wokwi.
+*   **Documentação:** Overleaf (LaTeX).
+
+## ⚙️ Especificações Técnicas
+*   **Target Hardware:** ATmega328P (8-bit AVR RISC architecture).
+*   **Clock Frequency:** 16 MHz (External Crystal Oscillator).
+*   **Toolchain:** AVR-GCC compiler, Toolchain AVR.
+*   **Paradigma:** Bare-metal programming (eficiência de ciclos de clock e gestão de memória Flash/SRAM).
 
 ---
 
-## Atividades Desenvolvidas
+## 🧠 Conceitos de Baixo Nível Aplicados
+Conforme as diretrizes da disciplina, é **proibido** o uso de funções da API Arduino (como `digitalWrite` ou `delay`). Foram implementados:
+
+### 1. Manipulação de I/O Digital via Registradores
+Substituição das funções `pinMode()` e `digitalWrite()` pela configuração direta:
+*   **DDRx (Data Direction Register):** Definição de direção de fluxo (Entrada/Saída).
+*   **PORTx (Data Register):** Controle de estados lógicos e ativação de resistores de pull-up.
+*   **PINx (Input Pins Address):** Leitura síncrona de estados de entrada.
+
+### 2. Gestão de Temporização por Hardware (Timers/Counters)
+Uso do **Timer 1 (16-bit)** para bases de tempo precisas, evitando o bloqueio da CPU:
+*   **Prescaling:** Divisão de frequência (64, 256 ou 1024) para resoluções de milissegundos.
+*   **Modo CTC (Clear Timer on Compare Match):** Utilização do registro `OCR1A` para alvos determinísticos.
+*   **PWM:** Geração de sinais via registros `TCCRnA/B` para controle proporcional.
+
+### 3. Conversão Analógica-Digital (ADC)
+Manipulação direta para amostragem de sensores:
+*   **ADMUX:** Seleção de canal e referência de tensão.
+*   **ADCSRA:** Controle de habilitação, prescaler e início de conversão.
+
+### 4. Interrupções Externas
+Gerenciamento de eventos assíncronos em tempo real:
+*   **EICRA & EIMSK:** Configuração de sentido de borda (Rising/Falling) e máscaras de interrupção.
+
+---
+
+## 📚 Atividades Desenvolvidas
 
 | Aula | Descrição da Atividade | Código | Esquema | Montagem |
 | :--- | :--- | :---: | :---: | :---: |
@@ -47,8 +79,8 @@ O **Sistema de Gestão e Controle Automatizado de Estoque (SGC2AE)** é uma solu
 
 ---
 
-## Estrutura do Repositório
-*   **`/atividades`**: Códigos-fonte `.ino` utilizando manipuladores de hardware bare-metal.
+## 📁 Estrutura do Repositório
+*   **`/atividades`**: Códigos-fonte `.ino` comentados com uso de `DDRx`, `PORTx`, `ADMUX`, etc.
 *   **`/projeto_final`**: Código, diagramas e imagens do sistema SGC2AE.
 *   **`/relatorio`**: Documentação técnica final em PDF (`relatorio_sist_embarcados.pdf`).
 *   **`/figuras`**: Acervo de esquemáticos e fotos de montagem das atividades.
