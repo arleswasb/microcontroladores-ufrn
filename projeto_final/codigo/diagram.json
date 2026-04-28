@@ -1,0 +1,535 @@
+{
+    "version": 1,
+    "author": "WERBERT BARRADAS",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "wokwi-arduino-mega",
+            "id": "mega",
+            "top": 259.8,
+            "left": 6,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-lcd1602",
+            "id": "lcd1",
+            "top": -300.8,
+            "left": 92,
+            "attrs": {
+                "pins": "i2c"
+            }
+        },
+        {
+            "type": "wokwi-dht22",
+            "id": "dht1",
+            "top": 57.9,
+            "left": -427.8,
+            "attrs": {
+                "humidity": "59",
+                "temperature": "32"
+            }
+        },
+        {
+            "type": "wokwi-potentiometer",
+            "id": "pot1",
+            "top": 578.1,
+            "left": 183.4,
+            "rotate": 180,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-hc-sr04",
+            "id": "ultrasonic2",
+            "top": 538.1,
+            "left": 554.1,
+            "rotate": 180,
+            "attrs": {
+                "distance": "63"
+            }
+        },
+        {
+            "type": "wokwi-hc-sr04",
+            "id": "ultrasonic3",
+            "top": -36.9,
+            "left": 792.7,
+            "attrs": {
+                "distance": "102"
+            }
+        },
+        {
+            "type": "wokwi-hc-sr04",
+            "id": "ultrasonic4",
+            "top": 538.1,
+            "left": 794.1,
+            "rotate": 180,
+            "attrs": {
+                "distance": "63"
+            }
+        },
+        {
+            "type": "wokwi-hc-sr04",
+            "id": "ultrasonic5",
+            "top": -36.9,
+            "left": 562.3,
+            "attrs": {
+                "distance": "81"
+            }
+        },
+        {
+            "type": "wokwi-pushbutton",
+            "id": "btn1",
+            "top": -243.4,
+            "left": 604.8,
+            "attrs": {
+                "color": "green",
+                "xray": "1"
+            }
+        },
+        {
+            "type": "wokwi-potentiometer",
+            "id": "pot2",
+            "top": 578.1,
+            "left": 308.2,
+            "rotate": 180,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-led",
+            "id": "ledTemp",
+            "top": -90,
+            "left": 147.8,
+            "attrs": {
+                "color": "red",
+                "label": "PWM Temp"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "ledUmid",
+            "top": -90,
+            "left": 253.4,
+            "attrs": {
+                "color": "blue",
+                "label": "PWM Umid"
+            }
+        },
+        {
+            "type": "wokwi-text",
+            "id": "text1",
+            "top": 662.4,
+            "left": 163.2,
+            "attrs": {
+                "text": "Setpoint Temp"
+            }
+        },
+        {
+            "type": "wokwi-text",
+            "id": "text2",
+            "top": 662.4,
+            "left": 288,
+            "attrs": {
+                "text": "Setpoint Humidity"
+            }
+        },
+        {
+            "type": "wokwi-text",
+            "id": "text3",
+            "top": -76.8,
+            "left": 595.2,
+            "attrs": {
+                "text": "Q1 - Superior Esq"
+            }
+        },
+        {
+            "type": "wokwi-text",
+            "id": "text4",
+            "top": -76.8,
+            "left": 835.2,
+            "attrs": {
+                "text": "Q2 - Superior Dir"
+            }
+        },
+        {
+            "type": "wokwi-text",
+            "id": "text5",
+            "top": 643.2,
+            "left": 576,
+            "attrs": {
+                "text": "Q3 - Inferior Esq"
+            }
+        },
+        {
+            "type": "wokwi-text",
+            "id": "text6",
+            "top": 643.2,
+            "left": 825.6,
+            "attrs": {
+                "text": "Q4 - Inferior Dir"
+            }
+        },
+        {
+            "type": "wokwi-text",
+            "id": "text7",
+            "top": -336,
+            "left": 220.8,
+            "attrs": {
+                "text": "Display"
+            }
+        },
+        {
+            "type": "wokwi-text",
+            "id": "text8",
+            "top": 19.2,
+            "left": -441.6,
+            "attrs": {
+                "text": "Sensor Temp"
+            }
+        },
+        {
+            "type": "wokwi-buzzer",
+            "id": "bz1",
+            "top": -266.4,
+            "left": 760.2,
+            "attrs": {
+                "volume": "0.1"
+            }
+        },
+        {
+            "type": "wokwi-text",
+            "id": "text9",
+            "top": -288,
+            "left": 729.6,
+            "attrs": {
+                "text": "Sirene de Alerta"
+            }
+        },
+        {
+            "type": "wokwi-text",
+            "id": "text10",
+            "top": -288,
+            "left": 585.6,
+            "attrs": {
+                "text": "abertura porta"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r1",
+            "top": 62.4,
+            "left": 249.05,
+            "rotate": 90,
+            "attrs": {
+                "value": "150000"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r2",
+            "top": 62.4,
+            "left": 143.45,
+            "rotate": 90,
+            "attrs": {
+                "value": "150000"
+            }
+        }
+    ],
+    "connections": [
+        [
+            "mega:5V",
+            "dht1:VCC",
+            "red",
+            [
+                "v45.3",
+                "h338.3"
+            ]
+        ],
+        [
+            "mega:4",
+            "dht1:SDA",
+            "green",
+            [
+                "v-28.8",
+                "h-628.3"
+            ]
+        ],
+        [
+            "mega:GND.2",
+            "dht1:GND",
+            "black",
+            [
+                "v35.7",
+                "h-564.25",
+                "v-307.2"
+            ]
+        ],
+        [
+            "mega:21",
+            "lcd1:SCL",
+            "green",
+            [
+                "v-422.4",
+                "h-266.7",
+                "v-86.7"
+            ]
+        ],
+        [
+            "mega:20",
+            "lcd1:SDA",
+            "green",
+            [
+                "v-412.8",
+                "h-266.8",
+                "v-105.8"
+            ]
+        ],
+        [
+            "lcd1:GND",
+            "mega:GND.1",
+            "black",
+            [
+                "h-48",
+                "v144",
+                "h77"
+            ]
+        ],
+        [
+            "mega:5V",
+            "lcd1:VCC",
+            "red",
+            [
+                "v45.3",
+                "h-199.3",
+                "v-566.4"
+            ]
+        ],
+        [
+            "mega:22",
+            "ultrasonic5:TRIG",
+            "green",
+            [
+                "v-75.7",
+                "h276.2",
+                "v-144"
+            ]
+        ],
+        [
+            "ultrasonic5:ECHO",
+            "mega:23",
+            "green",
+            [
+                "v153.6",
+                "h-612.6"
+            ]
+        ],
+        [
+            "mega:24",
+            "ultrasonic3:TRIG",
+            "green",
+            [
+                "v-66.25",
+                "h507"
+            ]
+        ],
+        [
+            "mega:25",
+            "ultrasonic3:ECHO",
+            "green",
+            [
+                "v-56.65",
+                "h507"
+            ]
+        ],
+        [
+            "mega:26",
+            "ultrasonic2:TRIG",
+            "green",
+            [
+                "h65",
+                "v221.85",
+                "h192",
+                "v19.2"
+            ]
+        ],
+        [
+            "mega:27",
+            "ultrasonic2:ECHO",
+            "green",
+            [
+                "h74.2",
+                "v202.65",
+                "h162.4"
+            ]
+        ],
+        [
+            "mega:28",
+            "ultrasonic4:TRIG",
+            "green",
+            [
+                "h113",
+                "v173.95",
+                "h402.8"
+            ]
+        ],
+        [
+            "mega:29",
+            "ultrasonic4:ECHO",
+            "green",
+            [
+                "h122.2",
+                "v154.75",
+                "h374.4",
+                "v76.8"
+            ]
+        ],
+        [
+            "pot1:SIG",
+            "mega:A0",
+            "green",
+            [
+                "v-105.6",
+                "h-25.1"
+            ]
+        ],
+        [
+            "pot2:SIG",
+            "mega:A1",
+            "green",
+            [
+                "v-115.2",
+                "h-121.2"
+            ]
+        ],
+        [
+            "mega:5V",
+            "pot1:VCC",
+            "red",
+            [
+                "v112.5",
+                "h59.1"
+            ]
+        ],
+        [
+            "mega:5V",
+            "pot2:VCC",
+            "red",
+            [
+                "v102.9",
+                "h164.7"
+            ]
+        ],
+        [
+            "mega:GND.3",
+            "pot1:GND",
+            "black",
+            [
+                "v83.7",
+                "h59.85"
+            ]
+        ],
+        [
+            "mega:GND.3",
+            "pot2:GND",
+            "black",
+            [
+                "v93.3",
+                "h165.45"
+            ]
+        ],
+        [
+            "ledTemp:C",
+            "mega:GND.1",
+            "black",
+            [
+                "v20",
+                "h-50"
+            ]
+        ],
+        [
+            "ledUmid:C",
+            "mega:GND.1",
+            "black",
+            [
+                "v30",
+                "h-60"
+            ]
+        ],
+        [
+            "mega:GND.1",
+            "btn1:1.l",
+            "black",
+            [
+                "v-240",
+                "h364.6",
+                "v-259.2"
+            ]
+        ],
+        [
+            "mega:2",
+            "btn1:2.l",
+            "red",
+            [
+                "v-259.2",
+                "h216.8",
+                "v-115.2",
+                "h0",
+                "v-96"
+            ]
+        ],
+        [
+            "mega:11",
+            "bz1:2",
+            "red",
+            [
+                "v-96",
+                "h383.6",
+                "v-316.8",
+                "h259.2"
+            ]
+        ],
+        [
+            "mega:GND.1",
+            "bz1:1",
+            "black",
+            [
+                "v-115.2",
+                "h393.4",
+                "v-316.8",
+                "h268.8"
+            ]
+        ],
+        [
+            "mega:10",
+            "r1:2",
+            "blue",
+            [
+                "v-153.6",
+                "h-0.3"
+            ]
+        ],
+        [
+            "r1:1",
+            "ledUmid:A",
+            "blue",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "mega:9",
+            "r2:2",
+            "red",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "r2:1",
+            "ledTemp:A",
+            "red",
+            [
+                "h0"
+            ]
+        ]
+    ],
+    "dependencies": {}
+}
